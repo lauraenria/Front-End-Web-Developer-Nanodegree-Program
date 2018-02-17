@@ -1,0 +1,43 @@
+.container {
+    max-width: 340px;
+    margin: auto;
+    border: 1px solid black;
+    box-shadow: 10px 10px 3px 0px rgba(93,119,142,1);
+    background-color: #E2D1B7;
+}
+
+h3 {
+    text-transform: capitalize;
+    margin: 2%;
+    padding: 2%;
+}
+
+img {
+    margin: 2%;
+    padding: 2%;
+
+}
+
+
+
+#interesting_fact{
+    font-style: italic;
+}
+
+.informations {
+    box-sizing: content-box;
+    border: 1px solid black;
+    margin: 2%;
+    padding: 2%;
+    background-color: #EAE9F1;
+
+}
+
+
+ul {
+    list-style-type: none;
+}
+
+.bold{
+    font-weight: bold;
+}
