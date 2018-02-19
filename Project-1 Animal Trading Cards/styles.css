@@ -1,9 +1,10 @@
 .container {
-    max-width: 340px;
+    width: 340px;
     margin: auto;
     border: 1px solid black;
+    padding: 10px;
     box-shadow: 10px 10px 3px 0px rgba(93,119,142,1);
-    background-color: #E2D1B7;
+    background-color: #e2d1b7;
 }
 
 h3 {
@@ -15,12 +16,9 @@ h3 {
 img {
     margin: 2%;
     padding: 2%;
-
 }
 
-
-
-#interesting_fact{
+.interesting_fact {
     font-style: italic;
 }
 
@@ -29,15 +27,13 @@ img {
     border: 1px solid black;
     margin: 2%;
     padding: 2%;
-    background-color: #EAE9F1;
-
+    background-color: #eae9f1;
 }
-
 
 ul {
     list-style-type: none;
 }
 
-.bold{
+.bold {
     font-weight: bold;
 }
