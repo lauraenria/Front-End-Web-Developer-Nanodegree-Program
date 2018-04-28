@@ -24,7 +24,7 @@ Front-End-Web-Developer-Nanodegree/
 
 ##### 1. [Animal Trading Cards](https://github.com/lauraenria/Front-End-Web-Developer-Nanodegree-Program/tree/master/Project-1%20Animal%20Trading%20Cards)
 ##### 2. [Portfolio Site](https://github.com/lauraenria/Front-End-Web-Developer-Nanodegree-Program/tree/master/Project-2%20Portfolio%20Site)
-##### 3. [Pixel Art Maker]()
+##### 3. [Pixel Art Maker](https://github.com/lauraenria/Front-End-Web-Developer-Nanodegree-Program/tree/master/Project-3%20Project%20Pixel%20Art%20Maker)
 
 
 
@@ -33,7 +33,7 @@ ________________________________________________________________________________
 
 #### 1. [Animal Trading Cards](https://codepen.io/LauraEnria/full/PObrrq/)
 #### 2. [Portfolio Site](https://codepen.io/LauraEnria/pen/GxQzwP)
-#### 3. [Pixel Art Maker](https://codepen.io/LauraEnria/pen/GxQzwP)
+#### 3. [Pixel Art Maker](https://codepen.io/LauraEnria/pen/aEQKxe)
 
 ___
 
