@@ -13,7 +13,8 @@ _________________________
 ```
 Front-End-Web-Developer-Nanodegree/
                                 +--  Project-1 Animal Trading Cards/
-                                +--  Project-1 Portfolio Site/
+                                +--  Project-2 Portfolio Site/
+                                +--  Project-3 Project Pixel Art Maker/
 
 ```
 
@@ -22,7 +23,8 @@ Front-End-Web-Developer-Nanodegree/
 ##### The following is a list of projects required to complete the Front End Nanodegree.
 
 ##### 1. [Animal Trading Cards](https://github.com/lauraenria/Front-End-Web-Developer-Nanodegree-Program/tree/master/Project-1%20Animal%20Trading%20Cards)
-##### 1. [Portfolio Site]()
+##### 2. [Portfolio Site](https://github.com/lauraenria/Front-End-Web-Developer-Nanodegree-Program/tree/master/Project-2%20Portfolio%20Site)
+##### 3. [Pixel Art Maker]()
 
 
 
@@ -30,4 +32,9 @@ Front-End-Web-Developer-Nanodegree/
 ____________________________________________________________________________________________
 
 #### 1. [Animal Trading Cards](https://codepen.io/LauraEnria/full/PObrrq/)
-#### 2. [Portfolio Project](https://codepen.io/LauraEnria/pen/GxQzwP)
+#### 2. [Portfolio Site](https://codepen.io/LauraEnria/pen/GxQzwP)
+#### 3. [Pixel Art Maker](https://codepen.io/LauraEnria/pen/GxQzwP)
+
+___
+
+[**Personal notes that I kept from the course**](https://github.com/lauraenria/learning-notes/tree/master/Front-End-Web-Developer-Nanodegree-Program-Notes)
