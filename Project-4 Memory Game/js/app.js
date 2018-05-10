@@ -6,7 +6,7 @@ let cardsArray = ['fa-anchor', 'fa-anchor', 'fa-bicycle', 'fa-bolt', 'fa-cube', 
 
 let lock = false;
 let firstClick = null, secondClick = null;
-let li1, li2; //element of firstClick and secondClick
+let li1 = null, li2 = null; //element of firstClick and secondClick
 let score = document.querySelector('#fin-score');
 //move(s) variables
 let moves = 0;
@@ -138,11 +138,14 @@ function restarValue() {
     for (let i = 0; i < 3; i++) {
         allStars[i].classList.remove('hide');
     }
+
     // empty matched cards variables
     machedCard = 0;
     startGame = 0;
     moves = 0;
     counter.textContent = 0;
+    li1 = null;
+    li2 = null;
     // hide the modal
     modal.classList.remove('showed');
     modal.classList.add('hide');
@@ -231,6 +234,8 @@ function gameStart() {
     // we restart the variables
     // Show again the stars
     restarValue();
+    // we restart the click
+    restartClick();
     // // we stop the time
     endOfGame();
     //  we clear the time string
