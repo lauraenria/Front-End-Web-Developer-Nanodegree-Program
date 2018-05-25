@@ -8,12 +8,14 @@ let lock = false;
 let firstClick = null, secondClick = null;
 let li1 = null, li2 = null; //element of firstClick and secondClick
 let score = document.querySelector('#fin-score');
+let finalscore = 0;
 //move(s) variables
 let moves = 0;
 let lastMoves = document.querySelector('#fin-moves');
 let lastTime = document.querySelector('#fin-time');
 let counter = document.querySelector('.moves');
 let machedCard = 0;
+
 
 // star icon variable
 const allStars = document.querySelectorAll('.fa-star');
@@ -202,10 +204,11 @@ const pickACard = card => {
                 li1.classList.add('true');
                 li2.classList.add('match');
                 li2.classList.add('true');
-                score.textContent += 5;
+                finalscore += 5;
                 machedCard++;
                 if (machedCard === 8) {
                     endOfGame()
+                    score.textContent = finalscore.toString();
                     modal.classList.remove('hide')
                     modal.classList.add('showed')
                 }
@@ -215,7 +218,7 @@ const pickACard = card => {
                 // console.log('Wrong Choice ');
                 li1.classList.add('unMatch');
                 li2.classList.add('unMatch');
-                score.textContent -= 1;
+                finalscore -= 1;
                 setTimeout(function () {
                     closeUnmatchedCards()
                 }, 750)
