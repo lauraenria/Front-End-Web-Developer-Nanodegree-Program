@@ -128,6 +128,11 @@ var Engine = (function(global) {
 
   function gameOver(){
     console.log("gameover!")
+    life = 5;
+    for(let i=0; i<hearts.length; i++){
+      console.log(hearts);
+      hearts[i].classList.remove("hidden");
+    }
   }
 
   function upgradeLevel() {}

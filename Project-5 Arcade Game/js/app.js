@@ -19,8 +19,6 @@ Enemy.prototype.update = function(dt) {
   // all computers.
   this.x +=  this.v*dt;
   if (this.x > 460) this.x = -10;
-//  if (this.y < 0) this.y = 0;
-//  if (this.y > 450) this.y = 450;
 };
 
 // Draw the enemy on the screen, required method for game
