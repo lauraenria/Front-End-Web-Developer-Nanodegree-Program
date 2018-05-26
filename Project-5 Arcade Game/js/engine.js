@@ -22,14 +22,9 @@ var Engine = (function(global) {
     win = global.window,
     canvas = doc.createElement("canvas"),
     ctx = canvas.getContext("2d"),
-    lastTime,
-    score = 0;
-  level = 0;
-  life = 5;
+    lastTime;
 
   var button = document.querySelector(".restart");
-  var hearts = document.querySelectorAll(".heart");
-  // console.log(hearts);
 
   canvas.width = 505;
   canvas.height = 606;
@@ -91,48 +86,6 @@ var Engine = (function(global) {
   function update(dt) {
     updateEntities(dt);
     checkCollisions();
-  }
-
-  function checkCollisions() {
-    allEnemies.forEach(function(enemy) {
-      var diffX = Math.abs(enemy.x - player.x);
-      var diffY = Math.abs(enemy.y - player.y);
-      if (diffX <= 75 && diffY === 0) {
-        youAreDead();
-      }
-    });
-  }
-
-  function backToStart() {
-    player.x = 200;
-    player.y = 300;
-  }
-
-  function youAreDead() {
-      score -= 1;
-      var hearts = document.querySelectorAll(".heart");
-      hearts[5 - life].classList.add("hidden");
-      life--;
-      backToStart();
-      if (life === 0) {
-        gameOver();
-      }
-  }
-
-  function point() {
-    if (player.y === -20) {
-      score += 1;
-      backToStart();
-    }
-  }
-
-  function gameOver(){
-    console.log("gameover!")
-    life = 5;
-    for(let i=0; i<hearts.length; i++){
-      console.log(hearts);
-      hearts[i].classList.remove("hidden");
-    }
   }
 
   function upgradeLevel() {}
