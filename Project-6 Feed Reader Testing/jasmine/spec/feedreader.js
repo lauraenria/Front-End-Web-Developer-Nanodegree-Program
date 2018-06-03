@@ -88,18 +88,16 @@ $(
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
-        
-
       beforeEach(function(done) {
         // Avoid duplicated setup
-    // Before loading feed
-        loadFeed(0,function() {
+        // Before loading feed
+        loadFeed(0, function() {
           done();
         });
       });
 
       it("has at least one .entry element", function(done) {
-        var entries = document.querySelectorAll('.feed .entry')
+        var entries = document.querySelectorAll(".feed .entry");
         expect(entries.length).toBeGreaterThan(0);
         done();
       });
@@ -109,6 +107,23 @@ $(
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+      describe("New Feed Selection", function() {
+        var title;
+        beforeEach(function(done) {
+          loadFeed(0, function() {
+            title = document.querySelector(".header-title").innerHTML;
+            loadFeed(1, function() {
+              done();
+            });
+          });
+        });
+
+        it("changes its loaded content", function(done) {
+          var newTitle = document.querySelector(".header-title").innerHTML;
+          expect(title).not.toEqual(newTitle);
+          done();
+        });
+      });
     });
   })()
 );
