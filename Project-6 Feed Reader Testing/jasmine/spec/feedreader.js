@@ -25,7 +25,7 @@ $(
       it("are defined", function() {
         expect(allFeeds).toBeDefined();
         expect(allFeeds instanceof Array).toBeTruthy();
-        expect(allFeeds.length).not.toBe(0);
+        expect(allFeeds.length).toBeGreaterThan(0);
       });
 
       /* TODO: Write a test that loops through each feed
@@ -44,10 +44,10 @@ $(
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-      it('have names', function() {
+      it("have names", function() {
         allFeeds.forEach(function(feed) {
           expect(feed.name).toBeDefined();
-          expect(typeof feed.name).toBe('string');
+          expect(typeof feed.name).toBe("string");
           expect(feed.name.length).not.toBe(0);
         });
       });
@@ -60,41 +60,55 @@ $(
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
-        var body = document.body;
-        var menuIcon = document.querySelector('.menu-icon-link');
+      var body = document.body;
+      var menuIcon = document.querySelector(".menu-icon-link");
 
-        it('is hidden by default', function(){
-            expect(body.className).toContain('menu-hidden')
-        })
+      it("is hidden by default", function() {
+        expect(body.className).toContain("menu-hidden");
+      });
 
       /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
-        it('shows and hides properly when menu icon is clicked', function(){
-            menuIcon.click();
-            expect(body.className).not.toContain('menu-hidden')
-            menuIcon.click();
-            expect(body.className).toContain('menu-hidden')
-        })
-        
+      it("shows and hides properly when menu icon is clicked", function() {
+        menuIcon.click();
+        expect(body.className).not.toContain("menu-hidden");
+        menuIcon.click();
+        expect(body.className).toContain("menu-hidden");
+      });
     });
 
     /* TODO: Write a new test suite named "Initial Entries" */
-
-    /* TODO: Write a test that ensures when the loadFeed
+    describe("Initial Entries", function() {
+      /* TODO: Write a test that ensures when the loadFeed
          * function is called and completes its work, there is at least
          * a single .entry element within the .feed container.
          * Remember, loadFeed() is asynchronous so this test will require
          * the use of Jasmine's beforeEach and asynchronous done() function.
          */
+        
 
-    /* TODO: Write a new test suite named "New Feed Selection" */
+      beforeEach(function(done) {
+        // Avoid duplicated setup
+    // Before loading feed
+        loadFeed(0,function() {
+          done();
+        });
+      });
 
-    /* TODO: Write a test that ensures when a new feed is loaded
+      it("has at least one .entry element", function(done) {
+        var entries = document.querySelectorAll('.feed .entry')
+        expect(entries.length).toBeGreaterThan(0);
+        done();
+      });
+
+      /* TODO: Write a new test suite named "New Feed Selection" */
+      /* TODO: Write a test that ensures when a new feed is loaded
          * by the loadFeed function that the content actually changes.
          * Remember, loadFeed() is asynchronous.
          */
+    });
   })()
 );
