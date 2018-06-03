@@ -24,6 +24,7 @@ $(
          */
       it("are defined", function() {
         expect(allFeeds).toBeDefined();
+        expect(allFeeds instanceof Array).toBeTruthy();
         expect(allFeeds.length).not.toBe(0);
       });
 
@@ -31,10 +32,11 @@ $(
          * in the allFeeds object and ensures it has a URL defined
          * and that the URL is not empty.
          */
-      it("they have URL defined and it is not empty", function() {
+      it("have URLs defined and it is not empty", function() {
         allFeeds.forEach(function(feed) {
           expect(feed.url).toBeDefined();
           expect(feed.url.length).not.toBe(0);
+          expect(feed.url).toMatch(/^(http|https):\/\//);
         });
       });
 
@@ -42,27 +44,42 @@ $(
          * in the allFeeds object and ensures it has a name defined
          * and that the name is not empty.
          */
-      it('they have "name" defined and it is not empty', function() {
-        allFeeds.forEach(function(name) {
-          expect(name.url).toBeDefined();
-          expect(name.url.length).not.toBe(0);
+      it('have names', function() {
+        allFeeds.forEach(function(feed) {
+          expect(feed.name).toBeDefined();
+          expect(typeof feed.name).toBe('string');
+          expect(feed.name.length).not.toBe(0);
         });
       });
     });
 
     /* TODO: Write a new test suite named "The menu" */
-
-    /* TODO: Write a test that ensures the menu element is
+    describe("The menu", function() {
+      /* TODO: Write a test that ensures the menu element is
          * hidden by default. You'll have to analyze the HTML and
          * the CSS to determine how we're performing the
          * hiding/showing of the menu element.
          */
+        var body = document.body;
+        var menuIcon = document.querySelector('.menu-icon-link');
 
-    /* TODO: Write a test that ensures the menu changes
+        it('is hidden by default', function(){
+            expect(body.className).toContain('menu-hidden')
+        })
+
+      /* TODO: Write a test that ensures the menu changes
           * visibility when the menu icon is clicked. This test
           * should have two expectations: does the menu display when
           * clicked and does it hide when clicked again.
           */
+        it('shows and hides properly when menu icon is clicked', function(){
+            menuIcon.click();
+            expect(body.className).not.toContain('menu-hidden')
+            menuIcon.click();
+            expect(body.className).toContain('menu-hidden')
+        })
+        
+    });
 
     /* TODO: Write a new test suite named "Initial Entries" */
 
